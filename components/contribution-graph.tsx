@@ -38,7 +38,7 @@ export function ContributionGraph() {
         const max = Math.max(...contributionData.map(d => d.count))
         setMaxHours(max)
         setContributions(contributionData)
-      } catch (error) {
+      } catch (error:any) {
         console.error("Failed to fetch contribution data:", error)
       }
     }
