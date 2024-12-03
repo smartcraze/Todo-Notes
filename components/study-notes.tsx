@@ -21,7 +21,7 @@ export function StudyNotes() {
         const response = await fetch(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/attendance`)
         const data = await response.json()
         setNotes(data.filter((note: Note) => note.notes).slice(0, 5))
-      } catch (error) {
+      } catch (error:any) {
         console.error("Failed to fetch notes:", error)
       }
     }

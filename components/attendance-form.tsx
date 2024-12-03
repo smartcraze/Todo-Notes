@@ -70,7 +70,7 @@ export function AttendanceForm() {
       });
 
       form.reset();
-    } catch (error) {
+    } catch (error:any) {
       console.error("Submission Error:", error);
 
       toast({
