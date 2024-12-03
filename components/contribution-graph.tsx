@@ -16,7 +16,7 @@ export function ContributionGraph() {
   useEffect(() => {
     async function fetchContributions() {
       try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/attendance`)
+        const response = await fetch("https://dsabackend.smartcraze.online/api/attendance")
         const data = await response.json()
         
         // Generate last 365 days

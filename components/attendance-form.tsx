@@ -44,7 +44,7 @@ export function AttendanceForm() {
         ? values.notes.split(",").map((note) => note.trim()) // Split by comma and trim each note
         : [];
 
-      const response = await fetch(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/attendance`, {
+      const response = await fetch("https://dsabackend.smartcraze.online/api/attendance", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

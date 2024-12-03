@@ -18,7 +18,7 @@ export function StudyNotes() {
   useEffect(() => {
     async function fetchNotes() {
       try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/attendance`)
+        const response = await fetch("https://dsabackend.smartcraze.online/api/attendance")
         const data = await response.json()
         setNotes(data.filter((note: Note) => note.notes).slice(0, 5))
       } catch (error:any) {

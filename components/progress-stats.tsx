@@ -22,7 +22,7 @@ export function ProgressStats() {
   useEffect(() => {
     async function fetchStats() {
       try {
-        const response = await fetch(`${process.env.NEXT_PUBLIC_ENDPOINT}/api/attendance`)
+        const response = await fetch("https://dsabackend.smartcraze.online/api/attendance")
         const data: AttendanceData[] = await response.json()
 
         const totalDays = data.length
